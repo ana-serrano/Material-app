@@ -1,0 +1,14 @@
+plastic
+rubber
+metallic
+fabric
+ceramic
+soft
+hard
+matte
+glossy
+bright
+rough
+refstrng
+refsharp
+reftint
