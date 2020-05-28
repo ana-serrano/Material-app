@@ -14,6 +14,9 @@ number = {6},
 year = {2016}
 }
 ```
+# Precomputed data:
+Please, download precomputed data for the editor [here](https://www.dropbox.com/s/2n1f341juiwdgkp/precompData.rar?raw=1), decompress it, and place it in *editor/Core/Python_scripts/precompData* 
+
 
 # Contents: 
 - editor: Example editor as described in the main paper

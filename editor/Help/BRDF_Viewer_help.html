@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>BRDF Viewer Help</h1>
+
+<p>--------------------------------------------------------------------------------------------------------------------------------</p>
+<pre>
+	
+	* For details about the implementation of the editing process, please refer to the main paper:
+		An intuitive control space for material appearance
+		Ana Serrano, Diego Gutierrez, Karol Myszkowski, Hans-Peter Seidel, and Belen Masia
+		ACM Transactions on Graphics (Proc. of SIGGRAPH Asia 2016)
+		<a href="http://webdiis.unizar.es/~aserrano/projects/Material-Appearance.html" target="_blank">Project Page</a>
+	
+	* Author of the GUI interface: Miguel Barrio
+		
+	* Note: The gradient descent described in the paper has been replaced for a more efficient nonlinear optimization method.
+	
+	<b>Requirements :</b>
+	
+		- Windows OS 
+		- Python 2.7  (including numpy library)
+		- <a href="https://www.disneyanimation.com/technology/brdf.html" target="_blank">BRDF explorer</a>
+		
+	<b>How to use :</b>
+	
+		- Load a BRDF file.
+		
+		- Use the sliders or the textboxes to reach different values for each of the attributes available to edit. 
+		  Note that changing one attribute value may affect the other attributes as described in the main paper. 
+		  It is recommended to stay within the range [0.1 - 0.9] since extreme values may behave unexpectedly 
+		  in some cases.
+		  
+		- Alternatively, a new BRDF can be defined by clicking the <i>pick</i> button and selecting a point
+		  inside the plot showing a slice of the space. 
+		  		
+		- Once the desired value is achieved, press the <i>Render</i> button to load the current BRDF 
+		  using <i>BRDF Explorer</i>. Enable the <i>Autorender</i> checkbox to automatically render each step.
+		
+		- The <i>Log</i> box displays information about the state of the program.	
+			
+	<b>About the toolbar commands :</b>
+	
+		- <i>Load BRDF</i> : Loads a BRDF (.binary) file. 
+		- <i>Save BRDF</i> : Saves a BRDF (.binary) file. 
+		 
+	<b>About the render command :</b>
+		
+		- The render command comunicates with <i>BRDF explorer</i> in order to render the edited BRDFs. This feature relies 
+		  on a Visual Basic script that sends keys, so it is important to wait for the script to end before continuing 
+		  with the edits.		
+				 
+	<b>About the plots :</b>
+	
+		- The main plot shows a slice of the trained RBF for the selected attribute, as well as the limits of the convex hull. 
+		  The convex hull defines the boundaries that constrain the minimization (see main paper for more information). 
+		- The pair of alphas (PC components) that are displayed in the plot can be chosen with the corresponding X-Y dropdown menus.
+		  The alpha values that are not being displayed are fixed to the values of the current BRDF.
+		- The bars below the main plot display a 1D slice of the RBF along each of the five alphas (PC components).		
+	
+
+</pre>
+
+</body>
+</html>
